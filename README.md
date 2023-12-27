@@ -22,5 +22,5 @@ This code is a Python program that uses sockets to query the whois information o
 - The first line in the except block prints the `socket.error` exception to the standard output, which contains the error message and the error code of the socket error.
 
 ## Requirements
-A prerequisite for working with a domain is to install whois.
+  - A prerequisite for working with a domain is to install whois.
 https://learn.microsoft.com/en-us/sysinternals/downloads/whois
