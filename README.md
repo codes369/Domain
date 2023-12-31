@@ -1,10 +1,11 @@
 ## About
 This code is a Python program that uses sockets to query the whois information of any domain name entered by the user. Here is a line-by-line explanation of what the code does:
-
+## **Importing the socket module**
 - The first line imports the socket module, which provides access to the low-level network interface in Python.
 - The second line asks the user to enter a domain name, such as `python.org`, and converts it to lowercase.
 - The next four lines remove any unwanted characters from the domain name, such as `http://`, `https://`, or `www.`, which are not part of the domain name itself.
 - The next line splits the domain name by the dot (`.`) character and takes the last element, which is the top-level domain (TLD) of the domain name, such as `org`, `com`, or `net`.
+  ## **Getting the user input for the domain name**
 - The next six lines define a dictionary that maps some common TLDs to their corresponding whois servers, which are the servers that store the whois information for those domains. For example, the whois server for `org` domains is `whois.pir.org`, and the whois server for `com` and `net` domains is `whois.verisign-grs.com`. The dictionary also has a default value of `whois.iana.org`, which is the whois server for the Internet Assigned Numbers Authority (IANA).
 - The next line uses the `get` method of the dictionary to find the whois server for the given TLD, or use the default value if the TLD is not in the dictionary.
 - The next line creates a socket object, which is an endpoint of a network communication. The socket object is initialized with two parameters: `socket.AF_INET` and `socket.SOCK_STREAM`. The first parameter specifies the address family of the socket, which is `AF_INET` for IPv4 addresses. The second parameter specifies the socket type, which is `SOCK_STREAM` for TCP sockets.
@@ -21,6 +22,38 @@ This code is a Python program that uses sockets to query the whois information o
 - The next line prints the `msg` string to the standard output, which is the console by default. The `msg` string contains the whois information of the domain name, such as the registrant, the registrar, the creation date, the expiration date, the name servers, and other details.
 - The first line in the except block prints the `socket.error` exception to the standard output, which contains the error message and the error code of the socket error.
 
-## Requirements
-  - A prerequisite for working with a domain is to install whois.
+## Windows
+- A prerequisite for working with a domain is to install whois:
+
 https://learn.microsoft.com/en-us/sysinternals/downloads/whois
+## Linux
+- Update your .deb repos by running:
+
+`$ sudo apt update`
+- Apply any pending security or apps updates to your Linux box:
+
+`$ sudo apt upgrade`
+
+![whois](https://github.com/codes369/Domain/assets/93201875/a6247467-3e55-4d48-ab11-6631b6067446)
+
+- Then install the whois client on Debian or Ubuntu Linux using the apt command or apt-get command:
+
+`$ sudo apt install whois`
+
+![whois 2](https://github.com/codes369/Domain/assets/93201875/3311628e-dba8-4027-82c4-54a84c4a0ff2)
+
+- Test it using the whois command for IP address lookup. For example:
+
+`whois 142.250.192.78`
+
+`whois 2404:6800:4007:817::200e`
+
+- Then you can also do the domain name lookup. For instance:
+
+`$ whois domain-name-here` 
+
+`$ whois cyberciti.biz`
+
+`$ whois google.com`
+
+`$ whois nixcraft.com`
