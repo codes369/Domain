@@ -16,9 +16,11 @@ This code is a Python program that uses sockets to query the whois information o
 - The next five lines use a while loop to receive all the data from the whois server until the socket is closed. The loop condition is `True`, which means it will run indefinitely until a `break` statement is executed.
 - The first line in the loop uses the `recv` method of the socket object to receive up to 4096 bytes of data at a time from the whois server. The `recv` method takes an integer as an argument, which specifies the maximum number of bytes to receive. The `recv` method returns a bytes object, which is assigned to the variable `data`.
 - The next line checks if the `data` variable is empty, which means no more data is available from the server. If this is the case, the loop is terminated by a `break` statement.
+   ## **Decoding the message object**
 - The next line appends the received data to the `msg` object, which accumulates all the data from the server.
 - The next line in the try block uses the `close` method of the socket object to close the connection to the whois server. This is a good practice to free up the resources used by the socket.
 - The next line decodes the `msg` object to a string using utf-8 encoding, which is the standard encoding for whois information. The decoded string is assigned to the same variable `msg`.
+  ## **Printing the whois information**
 - The next line prints the `msg` string to the standard output, which is the console by default. The `msg` string contains the whois information of the domain name, such as the registrant, the registrar, the creation date, the expiration date, the name servers, and other details.
 - The first line in the except block prints the `socket.error` exception to the standard output, which contains the error message and the error code of the socket error.
 
@@ -40,7 +42,7 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/whois
 
 `$ sudo apt install whois`
 
-![whois 2](https://github.com/codes369/Domain/assets/93201875/3311628e-dba8-4027-82c4-54a84c4a0ff2)
+![whois](https://github.com/codes369/Domain/assets/93201875/3311628e-dba8-4027-82c4-54a84c4a0ff2)
 
 - Test it using the whois command for IP address lookup. For example:
 
@@ -57,3 +59,7 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/whois
 `$ whois google.com`
 
 `$ whois nixcraft.com`
+## License
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+Licensed under the MIT license.
