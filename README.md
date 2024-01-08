@@ -1,9 +1,10 @@
-## About
-This code is a Python program that uses sockets to query the whois information of any domain name entered by the user. Here is a line-by-line explanation of what the code does:
 ## **Importing the socket module**
+This code is a Python program that uses sockets to query the whois information of any domain name entered by the user. Here is a line-by-line explanation of what the code does.
 - The first line imports the socket module, which provides access to the low-level network interface in Python.
 - The second line asks the user to enter a domain name, such as `python.org`, and converts it to lowercase.
+  ## **Cleaning the domain name**
 - The next four lines remove any unwanted characters from the domain name, such as `http://`, `https://`, or `www.`, which are not part of the domain name itself.
+  ## **Extracting the top-level domain**
 - The next line splits the domain name by the dot (`.`) character and takes the last element, which is the top-level domain (TLD) of the domain name, such as `org`, `com`, or `net`.
   ## **Getting the user input for the domain name**
 - The next six lines define a dictionary that maps some common TLDs to their corresponding whois servers, which are the servers that store the whois information for those domains. For example, the whois server for `org` domains is `whois.pir.org`, and the whois server for `com` and `net` domains is `whois.verisign-grs.com`. The dictionary also has a default value of `whois.iana.org`, which is the whois server for the Internet Assigned Numbers Authority (IANA).
