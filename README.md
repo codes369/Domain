@@ -30,10 +30,6 @@ This code is a Python program that uses sockets to query the whois information o
 
 https://learn.microsoft.com/en-us/sysinternals/downloads/whois
 
-## python
-Download Python for Windows:
-
-https://www.python.org/
 ## Linux
 - Update your .deb repos by running:
 
