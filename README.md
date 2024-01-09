@@ -60,7 +60,3 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/whois
 `$ whois google.com`
 
 `$ whois nixcraft.com`
-## License
-Copyright (c) Microsoft Corporation. All rights reserved.
-
-Licensed under the MIT license.
